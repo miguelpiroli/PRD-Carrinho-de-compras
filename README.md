@@ -8,6 +8,7 @@ o sistema ja estará funcionando
 
 
 BREVE DOCUMENTAÇÃO
+
 ------------Funcionalidades-----------
 
 Exibe uma lista de produtos disponíveis para compra
