@@ -78,17 +78,17 @@ class Carrinho
         return "Produto '{$item['nome']}' removido do carrinho em quantidade {$quantidade}.";
     }
 
-    public function mostrarCarrinho(): array
+    public function showCart(): array
     {
         return $this->carrinho;
     }
 
-    public function mostrarProdutos(): array
+    public function showProducts(): array
     {
         return $this->produtos;
     }
 
-    public function calcularTotal(): float
+    public function calculateTotal(): float
     {
         $total = 0;
         foreach ($this->carrinho as $item) {
@@ -97,7 +97,7 @@ class Carrinho
         return $total;
     }
 
-    public function aplicarDesconto (string $cupom):string 
+    public function applyDiscount (string $cupom):string 
     {
             if (strtoupper($cupom) === "DESCONTO10") {
             $desconto = 10; 
