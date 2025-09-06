@@ -10,12 +10,12 @@ echo "<p>" . $carrinho->addProduct(3, 3) . "</p>";
 
 echo "<h3>Carrinho Atual:</h3>";
 echo "<pre>";
-print_r($carrinho->mostrarCarrinho());
+print_r($carrinho->showCart());
 echo "</pre>";
 
 echo "<h3>Produtos (com estoque atualizado):</h3>";
 echo "<pre>";
-print_r($carrinho->mostrarProdutos());
+print_r($carrinho->showProducts());
 echo "</pre>";
 
 echo "<h2>===== Caso 2 =====</h2>";
@@ -29,18 +29,18 @@ echo "<p>" . $carrinho->removeProduct(2, 1) . "</p>";
 
 echo "<h3>Carrinho Atual:</h3>";
 echo "<pre>";
-print_r($carrinho->mostrarCarrinho());
+print_r($carrinho->showCart());
 echo "</pre>";
 
 echo "<h3>Produtos (com estoque restaurado):</h3>";
 echo "<pre>";
-print_r($carrinho->mostrarProdutos());
+print_r($carrinho->showProducts());
 echo "</pre>";
 
 
-$total = $carrinho->calcularTotal();
+$total = $carrinho->calculateTotal();
 echo "Total antes do desconto: R$ " . number_format($total, 2, ',', '.') . PHP_EOL;
 
 
 $cupom = "DESCONTO10";
-echo $carrinho->aplicarDesconto($cupom) . PHP_EOL;
+echo $carrinho->applyDiscount($cupom) . PHP_EOL;
